@@ -1,0 +1,150 @@
+@import './fonts.scss';
+
+@import './variables';
+@import './reset.scss';
+@import './elements.scss';
+@import '~swiper/swiper';
+@import '~swiper/modules/pagination';
+@import './swiper-elements.scss';
+
+@import './Blocks/header.scss';
+@import './Blocks/overlay.scss';
+@import './Blocks/menu.scss';
+@import './Blocks/modal.scss';
+@import './Blocks/services.scss';
+@import './Blocks/brands.scss';
+@import './Blocks/types.scss';
+@import './Blocks/prices.scss';
+@import './Blocks/footer.scss';
+
+.page {
+  max-width: 1440px;
+  margin-inline: auto;
+  overflow-x: hidden;
+  color: $color-text;
+  font-family: $font-text;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+  background-color: $color-background-main;
+
+  &-main {
+    position: relative;
+  }
+
+  &-header {
+    background-color: #ffffff;
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    transition: margin-left 0.4s ease;
+  }
+}
+
+.page-nav {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 24px;
+    height: 100%;
+    background: $gradient-background-overflow;
+  }
+
+  &__list {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    overflow-x: auto;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+}
+
+  &__item {
+    text-align: center;
+  }
+
+  &__link {
+    display: block;
+    border-radius: 6px;
+    padding: 8px 16px;
+    color: $color-primary;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    white-space: nowrap;
+    border: 2px solid transparent;
+  }
+
+  &__link:hover {
+    border: 2px solid #b8ffec;
+    background-color: #ffffff;
+  }
+
+  &__link:active {
+    background-color: #00000020;
+  }
+}
+
+.content {
+  display: flex;
+
+  &__text:not(:last-of-type) {
+    margin-block-end: 20px;
+  }
+
+  &__more-btn {
+    position: relative;
+    align-self: flex-start;
+    height: 24px;
+    padding-inline-start: 30px;
+    font-weight: 500;
+    font-size: 16px;
+  }
+
+  &__more-btn::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    background: url('../img/Icons_svg/arrows_more.svg') no-repeat center;
+  }
+}
+
+@media screen and (min-width: $screen-lg) {
+  .page-header {
+    display: none;
+  }
+
+  .content-image {
+    border-radius: 6px;
+  }
+
+  .page-nav {
+    &::after {
+      display: none;
+    }
+
+
+
+    &__list {
+      flex-wrap: wrap;
+    }
+  }
+
+  .page-content {
+    margin-left: 320px;
+  }
+}
+

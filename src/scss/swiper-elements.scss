@@ -1,0 +1,23 @@
+.swiper-wrapper {
+  box-sizing: border-box;
+}
+
+.swiper-pagination-bullet {
+  background-color: #ababab !important;
+  width: 12px;
+  height: 12px;
+
+  &-active {
+    background-color: $color-special-element-active !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .swiper-wrapper {
+    margin-bottom: 16px;
+  }
+
+  .swiper-pagination {
+    position: initial;
+  }
+}
