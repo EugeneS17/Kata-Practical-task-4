@@ -100,8 +100,8 @@
           <button type="button" class="nav-button nav-button--type--close modal__nav-button" title="Закрыть"></button>
           <p class="title modal__title">Заказать звонок</p>
           <form class="modal__form form-call">
-            <label for="phone" class="visually-hidden">Телефон</label>
-            <input type="tel" name="phone" id="phone-call" class="input modal__input" placeholder="Телефон" pattern="\d{11}" minlength="11" maxlength="11" required>
+            <label for="phone-call" class="visually-hidden">Телефон</label>
+            <input type="tel" name="phone" id="phone-call" class="input modal__input" autocomplete="off" placeholder="Телефон" pattern="\d{11}" minlength="11" maxlength="11" required>
             <p class="modal__consent">Нажимая "отправить", вы даёте согласие на
               <a href="#!" class="modal__link">обработку персональных данных</a>
               и соглашаетесь с нашей
@@ -114,11 +114,11 @@
           <p class="title">Обратная связь</p>
           <form class="modal__form form-message">
             <label for="name" class="visually-hidden">Имя</label>
-            <input type="text" name="name" id="name" class="input modal__input" placeholder="Имя" minlength="2" maxlength="20" required>
-            <label for="phone" class="visually-hidden">Телефон</label>
-            <input type="tel" name="phone" id="phone-message" class="input modal__input" placeholder="Телефон" pattern="\d{11}" minlength="11" maxlength="11" required>
+            <input type="text" name="name" id="name" class="input modal__input" autocomplete="off" placeholder="Имя" minlength="2" maxlength="20" required>
+            <label for="phone-message" class="visually-hidden">Телефон</label>
+            <input type="tel" name="phone" id="phone-message" class="input modal__input" autocomplete="off" placeholder="Телефон" pattern="\d{11}" minlength="11" maxlength="11" required>
             <label for="email" class="visually-hidden">Электронная почта</label>
-            <input type="email" name="email" id="email" class="input modal__input" placeholder="Электронная почта" required>
+            <input type="email" name="email" id="email" class="input modal__input" autocomplete="off" placeholder="Электронная почта" required>
             <label for="message" class="visually-hidden">Сообщение</label>
             <textarea name="message" id="message" class="input modal__textarea" rows="4" maxlength="250" placeholder="Сообщение" required></textarea>
             <p class="modal__consent">Нажимая "отправить", вы даёте согласие на
